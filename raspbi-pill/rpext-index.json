@@ -1,0 +1,19 @@
+{
+  "id": "pocopico.raspbi-pill",
+  "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/raspbi-pill/rpext-index.json",
+  "info": {
+    "name": "Early telnet start",
+    "description": "Simple extension which starts telnet early at boot",
+    "packer_url": "https://github.com/pocopico/tcrp-addons/tree/main/raspbi-pill",
+    "help_url": "https://github.com/pocopico/tcrp-addons/raspbi-pill"
+  },
+  "releases": {
+    "ds3615xs_25556": "https://github.com/pocopico/tcrp-addons/raw/main/raspbi-pill/recipes/universal.json",
+    "ds3615xs_41222": "https://github.com/pocopico/tcrp-addons/raw/main/raspbi-pill/recipes/universal.json",
+    "ds3615xs_42951": "https://github.com/pocopico/tcrp-addons/raw/main/raspbi-pill/recipes/universal.json",
+    "ds3615xs_42218": "https://github.com/pocopico/tcrp-addons/raw/main/raspbi-pill/recipes/universal.json",
+    "ds918p_25556": "https://github.com/pocopico/tcrp-addons/raw/main/raspbi-pill/recipes/universal.json",
+    "ds918p_41890": "https://github.com/pocopico/tcrp-addons/raw/main/raspbi-pill/recipes/universal.json",
+    "ds918p_42218": "https://github.com/pocopico/tcrp-addons/raw/main/raspbi-pill/recipes/universal.json"
+  }
+}

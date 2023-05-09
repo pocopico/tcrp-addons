@@ -1,0 +1,39 @@
+{
+  "files": [
+    {
+      "name": "raspbi-pill.sh",
+      "url": "https://github.com/pocopico/tcrp-addons/raw/main/raspbi-pill/src/raspbi-pill.sh",
+      "sha256": "db972341f00779c6f0068dec470f227d7f97a6cc9e9e6a155fe0d1211da848ca",
+      "packed": false
+    },
+    {
+      "name": "raspbi-pill-os.sh",
+      "url": "https://github.com/pocopico/tcrp-addons/raw/main/raspbi-pill/src/raspbi-pill-os.sh",
+      "sha256": "bdfcc89b6064bf45331f27ce8f173ea74ff71b0269bad25f92aca56696614418",
+      "packed": false
+    },
+    {
+      "name": "agetty",
+      "url": "https://github.com/pocopico/tcrp-addons/raw/main/raspbi-pill/agetty",
+      "sha256": "f54c68a0b08cf66e517a1a0bef985610bcf547f8b8170e6452822fe56c7ee0be",
+      "packed": false
+    },
+    {
+      "name": "agettystart.sh",
+      "url": "https://github.com/pocopico/tcrp-addons/raw/main/raspbi-pill/src/agettystart.sh",
+      "sha256": "686f3bf4bfe65a8ee6edf967f3522cf3f7ac6a2e8a69c596f15ce970e99ab536",
+      "packed": false
+    },
+    {
+      "name": "J01agetty.sh",
+      "url": "https://github.com/pocopico/tcrp-addons/raw/main/raspbi-pill/src/J01agetty.sh",
+      "sha256": "61e1ded0d618d9636f7f8d2f1430f0d01ff60254c2ccec8cdfb8ad9caa8134c7",
+      "packed": false
+    }
+  ],
+
+  "scripts": {
+    "on_boot": "raspbi-pill.sh"
+    
+  }
+}

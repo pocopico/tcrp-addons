@@ -1,0 +1,19 @@
+{
+  "id": "pocopico.early-telnet",
+  "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/early-telnet/rpext-index.json",
+  "info": {
+    "name": "Early telnet start",
+    "description": "Simple extension which starts telnet early at boot",
+    "packer_url": "https://github.com/pocopico/tcrp-addons/tree/main/early-telnet",
+    "help_url": "https://github.com/pocopico/tcrp-addons/early-telnet"
+  },
+  "releases": {
+    "ds3615xs_25556": "https://github.com/pocopico/tcrp-addons/raw/main/early-telnet/recipes/universal.json",
+    "ds3615xs_41222": "https://github.com/pocopico/tcrp-addons/raw/main/early-telnet/recipes/universal.json",
+    "ds3615xs_42951": "https://github.com/pocopico/tcrp-addons/raw/main/early-telnet/recipes/universal.json",
+    "ds3615xs_42218": "https://github.com/pocopico/tcrp-addons/raw/main/early-telnet/recipes/universal.json",
+    "ds918p_25556": "https://github.com/pocopico/tcrp-addons/raw/main/early-telnet/recipes/universal.json",
+    "ds918p_41890": "https://github.com/pocopico/tcrp-addons/raw/main/early-telnet/recipes/universal.json",
+    "ds918p_42218": "https://github.com/pocopico/tcrp-addons/raw/main/early-telnet/recipes/universal.json"
+  }
+}

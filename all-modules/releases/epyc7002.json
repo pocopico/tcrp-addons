@@ -1,0 +1,35 @@
+{
+  "mod_version": "v1",
+
+  "files": [
+    {
+      "name": "epyc7002-5.10.55.tgz",
+      "url": "https://github.com/pocopico/arpl-modules/releases/download/v1.11/epyc7002-5.10.55.tgz",
+      "sha256": "63580950e69d1c0986819ff6f100e9c9e0c1073570c8f2abeaac6935277ef1cc",
+      "packed": false
+    },
+    {
+      "name": "firmware.tgz",
+      "url": "https://github.com/pocopico/arpl-modules/releases/download/v1.05/firmware.tgz",
+      "sha256": "e2b704335f79d673a3e70d009b607a798e0f7e756a8a383bcc7a05cf28d14f0e",
+      "packed": false
+    },
+    {
+      "name": "install.sh",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-modules/master/all-modules/src/install.sh",
+      "sha256": "fd8cba54c99ca798de271d572ec3a00fb102d8d8cc22e511f268b46185be57db",
+      "packed": false
+    },
+    {
+      "name": "kmod",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-modules/master/all-modules/auxfiles/kmod",
+      "sha256": "c28321e57b8af57b04905a346b093182f74d2836ca188c5536b47e6459153938",
+      "packed": false
+    }
+  ],
+  
+  "scripts": {
+    "on_boot": "install.sh"
+  }
+
+}

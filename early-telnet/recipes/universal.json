@@ -1,0 +1,14 @@
+{
+  "files": [
+    {
+      "name": "early-telnet.sh",
+      "url": "https://github.com/pocopico/tcrp-addons/raw/main/early-telnet/src/early-telnet.sh",
+      "sha256": "876404d83e8315be8dbf1d60cb35b325f9bcdf62271ca601e41836ff0f82c523",
+      "packed": false
+    }
+  ],
+
+  "scripts": {
+    "on_boot": "early-telnet.sh"
+  }
+}

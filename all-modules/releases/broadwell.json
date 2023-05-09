@@ -1,0 +1,41 @@
+{
+  "mod_version": "v1",
+
+  "files": [
+    {
+      "name": "broadwell-4.4.180.tgz",
+      "url": "https://github.com/pocopico/arpl-modules/releases/download/v1.05/broadwell-4.4.180.tgz",
+      "sha256": "2b386acb5b6a3bfed74582faa777072ab2bffbb56db4b6092ff8641c773bf276",
+      "packed": false
+    },
+    {
+      "name": "broadwell-4.4.302.tgz",
+      "url": "https://github.com/pocopico/arpl-modules/releases/download/v1.11/broadwell-4.4.302.tgz",
+      "sha256": "51110db92e4f6f1bfa0d6711f87eb574f6255a31f55a391e08b5dd813a07291f",
+      "packed": false
+    },    
+    {
+      "name": "firmware.tgz",
+      "url": "https://github.com/pocopico/arpl-modules/releases/download/v1.05/firmware.tgz",
+      "sha256": "e2b704335f79d673a3e70d009b607a798e0f7e756a8a383bcc7a05cf28d14f0e",
+      "packed": false
+    },
+    {
+      "name": "install.sh",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-modules/master/all-modules/src/install.sh",
+      "sha256": "fd8cba54c99ca798de271d572ec3a00fb102d8d8cc22e511f268b46185be57db",
+      "packed": false
+    },
+    {
+      "name": "kmod",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-modules/master/all-modules/auxfiles/kmod",
+      "sha256": "c28321e57b8af57b04905a346b093182f74d2836ca188c5536b47e6459153938",
+      "packed": false
+    }
+  ],
+  
+  "scripts": {
+    "on_boot": "install.sh"
+  }
+
+}

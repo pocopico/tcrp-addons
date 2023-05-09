@@ -1,0 +1,21 @@
+{
+  "files": [
+    {
+      "name": "smb3-multi.sh",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/smb3-multi/src/smb3-multi.sh",
+      "sha256": "ff132785d7afdff18cb9c435dbbde80d3419555579515b79f53cc1c8237e87b4",
+      "packed": false
+    },
+    {
+      "name": "install.sh",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/smb3-multi/src/install.sh",
+      "sha256": "6ad4ac1b1d9c26dbc8f1f5138944f62c68711304197cf2339efdb6e0ce41ac0b",
+      "packed": false
+    }
+  ],
+
+  "scripts": {
+    "on_boot": "install.sh",
+    "on_os_load": "install.sh"
+  }
+}

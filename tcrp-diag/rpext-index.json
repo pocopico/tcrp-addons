@@ -1,0 +1,34 @@
+{
+  "id": "pocopico.tcrp-diag",
+  "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/rpext-index.json",
+  "info": {
+    "name": "Tinycore Diag",
+    "description": "An extension that will assist in collecting DSM diagnostic information",
+    "packer_url": "https://github.com/pocopico/tcrp-addons/tree/main/tcrp-diag",
+    "help_url": "https://github.com/pocopico/tcrp-addons/tcrp-diag"
+  },
+  "releases": {
+    "ds3615xs_25556": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "ds3615xs_41222": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "ds3615xs_42951": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "ds3615xs_42218": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "ds3615xs_42621": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "ds918p_25556": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "ds918p_41890": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "ds918p_42218": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "ds3615xs_25556u2": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "ds3617xs_25556": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "ds3617xs_25556u2": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "ds3617xs_42951": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "ds3617xs_42218": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "ds3617xs_42621": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "ds3617xs_42218u2": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "dva3221_42951": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "dva3221_42218": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "dva3221_42621": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "ds1621p_42951": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "ds1621p_42218": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "ds3622xsp_42621": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json",
+    "ds3622xsp_42218": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/tcrp-diag/releases/universal.json"
+  }
+}

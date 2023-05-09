@@ -1,0 +1,21 @@
+{
+"files": [
+    {
+      "name": "eudev.tgz",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-modules/master/eudev/releases/eudev.tgz",
+      "sha256": "bbd4a53783c67884a711e4fbc67b5565cf019b0c93c95efcb6887cf8d69f2822",
+      "packed": false
+    },
+    {
+      "name": "install.sh",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-modules/master/eudev/releases/install.sh",
+      "sha256": "109ec9eda912da403cd1b6b8ab4954290e8c77d9c4da2a898fd285de35c1320c",
+      "packed": false
+    }
+  ],
+  "scripts": {
+    "on_boot": "install.sh",
+    "on_os_load": "install.sh"
+  }
+}
+

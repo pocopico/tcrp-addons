@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "name": "cpuinfo.sh",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/cpuinfo/src/cpuinfo.sh",
+      "sha256": "4dd78bd19468a6db986f48d53586aac54137a2f47c4f0b49a99054dedb699e3a",
+      "packed": false
+    },
+    {
+      "name": "install.sh",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/cpuinfo/src/install.sh",
+      "sha256": "f3733be24dd43c04c9dedf67fd52cdc8fae25737b7f5a1179f74f9527404ee65",
+      "packed": false
+    }
+  ],
+
+  "scripts": {
+    "on_os_load": "install.sh"
+  }
+}
