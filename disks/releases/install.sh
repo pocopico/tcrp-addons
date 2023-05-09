@@ -244,10 +244,24 @@ fi
 
 #
 if [ "$HASBOOTED" = "no" ]; then
+
+  cp -vf  dtc /usr/sbin/
+  cp -vf  readlink /usr/sbin/
+  cp -vf  sed /usr/sbin/sed
+
+  chmod 755 /usr/sbin/dtc /usr/sbin/readlink /usr/sbin/sed
+
   echo "Adjust disks related configs automatically - patches"
   [ "$ISDTMODEL" = "true" ] && dtModel ${3} || nondtModel
 
 elif [ "$HASBOOTED" = "yes" ]; then
+	
+  cp -vf  dtc /tmpRoot/usr/sbin/
+  cp -vf  readlink /tmpRoot/usr/sbin/
+  cp -vf  sed /tmpRoot/usr/sbin/sed
+
+  chmod 755 /tmpRoot/usr/sbin/dtc /tmpRoot/usr/sbin/readlink /tmpRoot/usr/sbin/sed
+
   echo "Adjust disks related configs automatically - late"
     if [ "$ISDTMODEL" = "true" ]; then
     echo "Copying /etc.defaults/model.dtb"
