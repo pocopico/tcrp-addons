@@ -231,14 +231,25 @@ function nondtModel() {
   echo "usbportcfg=${USBPORTCFG}"
 }
 
-#
-if [ "${1}" = "patches" ]; then
-  echo "Adjust disks related configs automatically - patches"
-  [ "${2}" = "true" ] && dtModel ${3} || nondtModel
 
-elif [ "${1}" = "late" ]; then
+if [ `mount | grep tmpRoot | wc -l` -gt 0 ] ; then
+  HASBOOTED="yes"
+  echo "System passed junior"
+else
+  echo "System is booting"
+  HASBOOTED="no"
+fi
+
+[ -f /etc/model.dtb ] || [ -f /etc.defaults/model.dtb ] && ISDTMODEL="true"
+
+#
+if [ "$HASBOOTED" = "no" ]; then
+  echo "Adjust disks related configs automatically - patches"
+  [ "$ISDTMODEL" = "true" ] && dtModel ${3} || nondtModel
+
+elif [ "$HASBOOTED" = "yes" ]; then
   echo "Adjust disks related configs automatically - late"
-    if [ "${2}" = "true" ]; then
+    if [ "$ISDTMODEL" = "true" ]; then
     echo "Copying /etc.defaults/model.dtb"
     # copy file
     cp -vf /etc/model.dtb /tmpRoot/etc/model.dtb
