@@ -4,31 +4,31 @@
   "files": [
     {
       "name": "r1000-4.4.180.tgz",
-      "url": "https://github.com/pocopico/arpl-modules/releases/download/v1.05/r1000-4.4.180.tgz",
+      "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/r1000-4.4.180.tgz",
       "sha256": "ee0beb0aaec53fe7e1a0dbb5154d63b48e445b906d11a9d12f38d84e44c1de12",
       "packed": false
     },
     {
       "name": "r1000-4.4.302.tgz",
-      "url": "https://github.com/pocopico/arpl-modules/releases/download/v1.11/r1000-4.4.302.tgz",
+      "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/r1000-4.4.302.tgz",
       "sha256": "0d16f35246b16d0543c22067fd046897035ab72932e74efd8abaabf63a699bc2",
       "packed": false
     },    
     {
       "name": "firmware.tgz",
-      "url": "https://github.com/pocopico/arpl-modules/releases/download/v1.05/firmware.tgz",
+      "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/firmware.tgz",
       "sha256": "e2b704335f79d673a3e70d009b607a798e0f7e756a8a383bcc7a05cf28d14f0e",
       "packed": false
     },
     {
       "name": "install.sh",
-      "url": "https://raw.githubusercontent.com/pocopico/tcrp-modules/master/all-modules/src/install.sh",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/all-modules/src/install.sh",
       "sha256": "fd8cba54c99ca798de271d572ec3a00fb102d8d8cc22e511f268b46185be57db",
       "packed": false
     },
     {
       "name": "kmod",
-      "url": "https://raw.githubusercontent.com/pocopico/tcrp-modules/master/all-modules/auxfiles/kmod",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/all-modules/auxfiles/kmod",
       "sha256": "c28321e57b8af57b04905a346b093182f74d2836ca188c5536b47e6459153938",
       "packed": false
     }
