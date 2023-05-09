@@ -1,9 +1,3 @@
-  cp -vf  dtc /usr/sbin/
-  cp -vf  readlink /usr/sbin/
-  cp -vf  sed /usr/sbin/sed
-
-  chmod 755 /usr/sbin/dtc /usr/sbin/readlink /usr/sbin/sed
-
 
 PCI_ER="^[0-9a-fA-F]{4}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}\.[0-9a-fA-F]{1}"
 
