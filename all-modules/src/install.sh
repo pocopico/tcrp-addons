@@ -14,9 +14,11 @@ echo "Copying kmod,tar to /bin/"
 #/bin/cp -v tar  /bin/        ; chmod 700 /bin/tar
 echo "link depmod to kmod"
 ln -s /bin/kmod /usr/sbin/depmod
-tar xvfz /exts/all-modules/${TARGET_PLATFORM}-${LINUX_VER}.tgz -C /lib/modules/
+echo "Extracting modules"
+tar xfz /exts/all-modules/${TARGET_PLATFORM}-${LINUX_VER}.tgz -C /lib/modules/
 mkdir /lib/firmware
-tar xvfz /exts/all-modules/firmware.tgz -C /lib/firmware/
+echo "Extracting firmware"
+tar xfz /exts/all-modules/firmware.tgz -C /lib/firmware/
 /usr/sbin/depmod -a
 }
 
