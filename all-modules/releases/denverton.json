@@ -11,7 +11,7 @@
     {
       "name": "firmware.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/firmware.tgz",
-      "sha256": "e2b704335f79d673a3e70d009b607a798e0f7e756a8a383bcc7a05cf28d14f0e",
+      "sha256": "843bdb7a184466d5b463f5161dbe6c28d8655a349094af9413b6683da80f14c3",
       "packed": false
     },
     {
