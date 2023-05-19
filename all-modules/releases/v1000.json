@@ -5,13 +5,13 @@
     {
       "name": "v1000-4.4.180.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/v1000-4.4.180.tgz",
-      "sha256": "e8b43f3172098c1fada262de391674c55cdbfcd00ebc2a414e4b25cb35c53406",
+      "sha256": "f4ebc193cc026a094bab15f0077a02c48a068a2671d537c9aa49f5097ac1f787",
       "packed": false
     },
     {
       "name": "v1000-4.4.302.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/v1000-4.4.302.tgz",
-      "sha256": "c41431b086c08fc434b07a5c3dccdde9a32bcd7be9bb2f1dd9999ab204dd791f",
+      "sha256": "e9fc8dba907dde8ef53cd4ef298bd207d5dae2dc74c06775ab78a8876d16cc75",
       "packed": false
     },
     {

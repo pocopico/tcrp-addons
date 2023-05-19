@@ -5,13 +5,13 @@
     {
       "name": "geminilake-4.4.180.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/geminilake-4.4.180.tgz",
-      "sha256": "7885fe1e51ec62c859d8acffdc8460660023d5a5f6aee42e77d3ae8fef70723d",
+      "sha256": "9b0e00376c3a2dad64cd1e62a15ffeff176167548a475868e95ff4d048b49789",
       "packed": false
     },
     {
       "name": "geminilake-4.4.302.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/geminilake-4.4.302.tgz",
-      "sha256": "315a28406e17300005331bd639ec2fdbf81cd8b0dec31de80622708d0cefe64e",
+      "sha256": "c48defdce09474ca571ba48c0b768054640c4b59a09ab282fec5b08d99c8d7fb",
       "packed": false
     },     
     {
