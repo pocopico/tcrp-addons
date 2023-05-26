@@ -18,6 +18,7 @@ for platform in $platforms; do
         if [ "$sha" == "$sha256" ]; then
             echo "File $file -> OK"
         else
+	    fixes="1"
             echo "ERROR, File: $file LOCALSHA:$sha REMOTESHA:$sha256"
             if [ "$command" == "fix" ]; then
                 echo "Fixing local values, $file"
@@ -27,3 +28,5 @@ for platform in $platforms; do
 
     done <<<$(jq -re '.files[] | .url , .sha256' ${platform}.json | paste -d " " - -)
 done
+
+[ "$command" = "fix" ] && [ "$fixes" = "1" ] && git status && git commit -a -m "Fixing checksums" &&  git push 
