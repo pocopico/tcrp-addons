@@ -2,6 +2,9 @@
 
 # Check and update files and sha256sums for all-modules
 
+#echo "Getting latest chksum.log"
+#curl --insecure -L https://github.com/pocopico/redpill-modules/releases/latest/download/chksum.log
+
 command="$1"
 platforms="apollolake broadwell broadwellnk bromolow denverton epyc7002 geminilake r1000 v1000"
 
