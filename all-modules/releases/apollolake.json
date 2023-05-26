@@ -5,19 +5,19 @@
     {
       "name": "apollolake-4.4.180.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/apollolake-4.4.180.tgz",
-      "sha256": "58215c76812341364e50568ed893ece794d90228118b79f6dd2d64f18136b2d6",
+      "sha256": "c7e6f1f61b4636bcfb922a200923fca98b18c8cba2d30b3880be776940752a62",
       "packed": false
     },
     {
       "name": "apollolake-4.4.302.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/apollolake-4.4.302.tgz",
-      "sha256": "5d8731a774af9be17dfdf3cc693bac921c6541c6547c5cdc2cadd076a0cf0b33",
+      "sha256": "f15c39b7f19c8fa4ac75a8c40af3146456fc6de5b3235b6b81563b8ac6ade21d",
       "packed": false
     },    
     {
       "name": "firmware.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/firmware.tgz",
-      "sha256": "b83d5eafa626e266a36d130677336790509d979d94bf58e9d0035fb2bdc3bb22",
+      "sha256": "c22d3dda4da6a0b23f7cf22e6aec848a63f33305bd454995ef1e12a800db3804",
       "packed": false
     },
     {

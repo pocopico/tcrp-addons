@@ -5,19 +5,19 @@
     {
       "name": "broadwellnk-4.4.180.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/broadwellnk-4.4.180.tgz",
-      "sha256": "a0bbf64670290dadbe7e7e010d351732059ac779bbf84698efd92b600748598b",
+      "sha256": "17a130957fcd880b485b1b82b16c6e392a292aac55aad4af2949e6462ffd18a9",
       "packed": false
     },
     {
       "name": "broadwellnk-4.4.302.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/broadwellnk-4.4.302.tgz",
-      "sha256": "957683fd5d8b54f97503e8cf3d5a754066a062e38ff030f1ba3bcf5b85c7eacc",
+      "sha256": "e7590144bdda5b8f98358c3617c7cc0c990d8d690af733bd5b2f9270d1fd4dd2",
       "packed": false
     },    
     {
       "name": "firmware.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/firmware.tgz",
-      "sha256": "b83d5eafa626e266a36d130677336790509d979d94bf58e9d0035fb2bdc3bb22",
+      "sha256": "c22d3dda4da6a0b23f7cf22e6aec848a63f33305bd454995ef1e12a800db3804",
       "packed": false
     },
     {
