@@ -5,13 +5,13 @@
     {
       "name": "epyc7002-5.10.55.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/epyc7002-5.10.55.tgz",
-      "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+      "sha256": "8813c6f293038d490d29df2993543c517b0b636e65c205d66668d32f89404fab",
       "packed": false
     },
     {
       "name": "firmware.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/firmware.tgz",
-      "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+      "sha256": "8813c6f293038d490d29df2993543c517b0b636e65c205d66668d32f89404fab",
       "packed": false
     },
     {

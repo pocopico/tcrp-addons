@@ -5,19 +5,19 @@
     {
       "name": "denverton-4.4.180.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/denverton-4.4.180.tgz",
-      "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+      "sha256": "d60bd8586017e025584bfce8b16833a6de659b849b27fcab7a29c95300ef30e8",
       "packed": false
     },
 	 {
       "name": "denverton-4.4.302.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/denverton-4.4.302.tgz",
-      "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+      "sha256": "d60bd8586017e025584bfce8b16833a6de659b849b27fcab7a29c95300ef30e8",
       "packed": false
     },
     {
       "name": "firmware.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/firmware.tgz",
-      "sha256": "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5",
+      "sha256": "d60bd8586017e025584bfce8b16833a6de659b849b27fcab7a29c95300ef30e8",
       "packed": false
     },
     {
