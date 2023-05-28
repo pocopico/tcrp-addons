@@ -6,7 +6,13 @@
 #curl --insecure -L https://github.com/pocopico/redpill-modules/releases/latest/download/chksum.log
 
 command="$1"
+platform="$2"
+
+if [ -z "$platform" ] ; then
 platforms="apollolake broadwell broadwellnk bromolow denverton epyc7002 geminilake r1000 v1000"
+else
+platforms="$platform"
+fi
 
 for platform in $platforms; do
     echo "Checking $platform"
