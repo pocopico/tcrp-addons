@@ -23,7 +23,7 @@
     {
       "name": "install_denv.sh",
       "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/all-modules/src/install_denv.sh",
-      "sha256": "ecfcf28bbd5c60e50666d92033ed7b567d95fad6f3d5cf3d0186cae9a1ed0697",
+      "sha256": "9929bd8eb20e4b107ea3fccc4e8deb377dc26d67dc35fbd234d7cb5e949fa0ce",
       "packed": false
     },
     {
