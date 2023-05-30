@@ -9,9 +9,12 @@ cp /exts/misc/sed /tmpRoot/usr/bin/sed
 SED_PATH='/tmpRoot/usr/bin/sed'
 
 fixcpufreq() {
-    mount -t sysfs sysfs /sys
-    insmod /tmpRoot/usr/lib/modules/processor.ko
-    insmod /tmpRoot/usr/lib/modules/acpi-cpufreq.ko
+
+    if [ $(mount 2>/dev/null |grep sysfs |wc -l) -eq 0 ] ; then
+          mount -t sysfs sysfs /sys
+          [ -f /usr/lib/modules/processor.ko ] && insmod /tmpRoot/usr/lib/modules/processor.ko
+          [ -f /usr/lib/modules/acpi-cpufreq.ko ] && insmod /tmpRoot/usr/lib/modules/acpi-cpufreq.ko
+     fi 
     # CPU performance scaling
     if [ -f /tmpRoot/usr/lib/modules-load.d/70-cpufreq-kernel.conf ]; then
         cpufreq=$(ls -ltr /sys/devices/system/cpu/cpufreq/* 2>/dev/null | wc -l)
