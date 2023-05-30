@@ -2,9 +2,7 @@
 
 echo "Script for fixing missing HW features dependencies"
 
-PLATFORM=$(/bin/get_key_value /etc/synoinfo.conf unique | /bin/cut -d"_" -f2)
-
-[ -z "$PLATFORM" ] && PLATFORM="$(uname -u | cut -d '_' -f2)"
+PLATFORM="$(uname -u | cut -d '_' -f2)"
 
 cp /exts/misc/sed /tmpRoot/usr/bin/sed
 
