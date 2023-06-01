@@ -2,6 +2,7 @@
   "id": "boot-wait",
   "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/boot-wait/rpext-index.json",
   "info": {
+    "author_url": "https://github.com/pocopico/tcrp-addons/main/disks/",
     "name": "RedPill Bootwait",
     "description": "Simple extension which stops the execution early waiting for the boot device to appear",
     "packer_url": "https://github.com/RedPill-TTG/redpill-boot-wait",
