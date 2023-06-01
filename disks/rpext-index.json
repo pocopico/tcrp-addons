@@ -1,5 +1,6 @@
 {
   "id": "disks",
+  "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/disks/rpext-index.json",
   "info": {
     "author_url": "https://github.com/pocopico/tcrp-addons/main/disks/",
     "description": "All in one solution for disk issues",
@@ -93,6 +94,5 @@
     "sa6400_42962": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/disks/recipes/universal.json",
     "sa6400_64561": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/disks/recipes/universal.json",
     "zendofmodel": "endofurls"
-  },
-  "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/disks/rpext-index.json"
+  }
 }

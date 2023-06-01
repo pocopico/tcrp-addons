@@ -1,12 +1,12 @@
 {
   "id": "all-modules",
+    "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/all-modules/rpext-index.json",
   "info": {
     "author_url": "https://github.com/pocopico",
     "description": "Adds All modules Support",
     "help_url": "<todo>",
     "name": "all-modules",
-    "packer_url": "https://github.com/pocopico/tcrp-addons/tree/main/all-modules",
-    "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/all-modules/rpext-index.json"
+    "packer_url": "https://github.com/pocopico/tcrp-addons/tree/main/all-modules"
   },
   "releases": {
     "ds1019p_42218": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/all-modules/releases/apollolake.json",
