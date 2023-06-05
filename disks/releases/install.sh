@@ -153,7 +153,7 @@ function dtModel() {
       I=$((${I} + 1))
     done
     NUMPORTS=$((${I} - 1))
-    _set_conf_kv rd "maxdisks" "${NUMPORTS}"
+    [ ${NUMPORTS} -gt 16 ] && _set_conf_kv rd "maxdisks" "${NUMPORTS}" || _set_conf_kv rd "maxdisks" "16"
     echo "maxdisks=${NUMPORTS}"
 
     # NVME ports
@@ -201,7 +201,7 @@ function nondtModel() {
   NUMPORTS=$((${SATA_PORTS} + ${SAS_PORTS}))
   # Max supported disks is 26
   [ ${NUMPORTS} -gt 26 ] && NUMPORTS=26
-  _set_conf_kv rd "maxdisks" "${NUMPORTS}"
+  [ ${NUMPORTS} -gt 16 ] && _set_conf_kv rd "maxdisks" "${NUMPORTS}" || _set_conf_kv rd "maxdisks" "16"
   INTPORTCFG="0x$(printf "%x" $((2 ** ${NUMPORTS} - 1 - ${ESATAPORTCFG})))"
   _set_conf_kv rd "internalportcfg" "${INTPORTCFG}"
   # USB ports static, always 4 ports
@@ -266,7 +266,7 @@ elif [ "$HASBOOTED" = "yes" ]; then
     NUMPORTS=$(_get_conf_kv maxdisks)
     INTPORTCFG=$(_get_conf_kv internalportcfg)
     USBPORTCFG=$(_get_conf_kv usbportcfg)
-    _set_conf_kv hd "maxdisks" "${NUMPORTS}"
+    [ ${NUMPORTS} -gt 16 ] && _set_conf_kv hd "maxdisks" "${NUMPORTS}" || _set_conf_kv hd "maxdisks" "${NUMPORTS}"
     _set_conf_kv hd "internalportcfg" "${INTPORTCFG}"
     _set_conf_kv hd "usbportcfg" "${USBPORTCFG}"
     # log
