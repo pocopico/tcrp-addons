@@ -5,13 +5,13 @@
     {
       "name": "bromolow-3.10.108.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/bromolow-3.10.108.tgz",
-      "sha256": "a4778ed58b89b0e69ba86d05d082c52d22207d301bad87e08fedef4cfc1b317a",
+      "sha256": "8d78a47720a2d2f753e0c5161c83b99293ee247f226c92b3c9a0bef761354bc5",
       "packed": false
     },
     {
       "name": "firmware.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/firmware.tgz",
-      "sha256": "997deedcd95fb29fd6f81c3ccf468cda36e4aef486b2806068d809b2d6e4c1bd",
+      "sha256": "917e23eadfda4cadf129b4779f7e1ff55c5fd2c315326d63570d151c2b6b16fa",
       "packed": false
     },
     {
