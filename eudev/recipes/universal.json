@@ -1,15 +1,27 @@
 {
 "files": [
     {
-      "name": "eudev.tgz",
-      "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/eudev/releases/eudev.tgz",
-      "sha256": "bbd4a53783c67884a711e4fbc67b5565cf019b0c93c95efcb6887cf8d69f2822",
+      "name": "eudev-6.2.tgz",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/eudev/releases/eudev-6.2.tgz",
+      "sha256": "afdaebf3e33bb005c3d52432385bd4a147b395cf72a482a4927b47d7811a71d9",
+      "packed": false
+    },
+     {
+      "name": "eudev-7.1.tgz",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/eudev/releases/eudev-7.1.tgz",
+      "sha256": "af33aae5705b576726db2f378cb3d59db3ad4126d977207d1cfc2935e7a98bf7",
+      "packed": false
+    },
+     {
+      "name": "eudev-7.2.tgz",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/eudev/releases/eudev-7.2.tgz",
+      "sha256": "2906343146aa8084d9542e1b29d498813dee5cb4cc7328424b03ca5ad6b3bc55",
       "packed": false
     },
     {
       "name": "install.sh",
       "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/eudev/releases/install.sh",
-      "sha256": "109ec9eda912da403cd1b6b8ab4954290e8c77d9c4da2a898fd285de35c1320c",
+      "sha256": "02a6a6b46a7da54c4fe6458dfdc466fc1c02543bf709b4efd86020feefd1c5ec",
       "packed": false
     }
   ],

@@ -1,5 +1,11 @@
 #!/usr/bin/env ash
 
+# DSM version
+MajorVersion=`/bin/get_key_value /etc.defaults/VERSION majorversion`
+MinorVersion=`/bin/get_key_value /etc.defaults/VERSION minorversion`
+ModuleUnique=`/bin/get_key_value /etc.defaults/VERSION unique` # Avoid confusion with global variables
+
+echo "MajorVersion:${MajorVersion} MinorVersion:${MinorVersion}"
 
 
 ### USUALLY SCEMD is the last process run in init, so when scemd is running we are most
@@ -17,9 +23,17 @@ fi
 
 if [ "$HASBOOTED" = "no" ]; then
 
-  echo "Starting eudev daemon"
+  echo "Starting eudev daemon - modules"
   cd /
-  tar xfz /exts/eudev/eudev.tgz
+  if [ "${MajorVersion}" -lt "7" ]; then # < 7
+  tar xfz /exts/eudev/eudev-6.2.tgz -C /
+  else
+    if [ "${MinorVersion}" -lt "2" ]; then # < 2
+  tar xfz /exts/eudev/eudev-7.1.tgz -C /
+    else
+  tar xfz /exts/eudev/eudev-7.2.tgz -C /
+    fi
+  fi
   ln -s /lib/libkmod.so.2.4.0 /lib/libkmod.so.2
   ln -s /usr/bin/udevadm /usr/sbin/udevadm
   [ -e /proc/sys/kernel/hotplug ] && printf '\000\000\000\000' > /proc/sys/kernel/hotplug
