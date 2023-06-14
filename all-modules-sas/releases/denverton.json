@@ -1,0 +1,47 @@
+{
+  "mod_version": "v1",
+
+  "files": [
+    {
+      "name": "denverton-4.4.180.tgz",
+      "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/denverton-4.4.180.tgz",
+      "sha256": "e73ac68e7fd7d4ae926fcd2f56a90a45613377bf49cbb80f0bcc1374c7835fb0",
+      "packed": false
+    },
+	 {
+      "name": "denverton-4.4.302.tgz",
+      "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/denverton-4.4.302.tgz",
+      "sha256": "8f772c1bb2f06a64d773bfd1123ae58c3e0d6f833381ee7324c6ff5178845738",
+      "packed": false
+    },
+    {
+      "name": "firmware.tgz",
+      "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/firmware.tgz",
+      "sha256": "917e23eadfda4cadf129b4779f7e1ff55c5fd2c315326d63570d151c2b6b16fa",
+      "packed": false
+    },
+    {
+      "name": "install_denv.sh",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/all-modules/src/install_denv.sh",
+      "sha256": "c9e39d542ecfc449d9ace14bbd7ebcf4262c9526214fcfd955ff902c617e4657",
+      "packed": false
+    },
+    {
+      "name": "kmod",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/all-modules/auxfiles/kmod",
+      "sha256": "c28321e57b8af57b04905a346b093182f74d2836ca188c5536b47e6459153938",
+      "packed": false
+    },
+    {
+      "name": "tar",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/all-modules/auxfiles/tar",
+      "sha256": "fc6ee2194057f9c3a58719d130d79db7d8131dd3949d148be93eb09cffc43eb7",
+      "packed": false
+    }
+  ],
+  
+  "scripts": {
+    "on_boot": "install_denv.sh"
+  }
+
+}

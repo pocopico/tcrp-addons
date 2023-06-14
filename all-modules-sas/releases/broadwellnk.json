@@ -1,0 +1,41 @@
+{
+  "mod_version": "v1",
+
+  "files": [
+    {
+      "name": "broadwellnk-4.4.180.tgz",
+      "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/broadwellnk-4.4.180.tgz",
+      "sha256": "ddffcd238dcad56776f82e50ceb3c7c6d7cd5a491fd6486b44bbb23875a05f36",
+      "packed": false
+    },
+    {
+      "name": "broadwellnk-4.4.302.tgz",
+      "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/broadwellnk-4.4.302.tgz",
+      "sha256": "6cc38051f5a81964e009b3c04035ba485bee82e3cbb37900277c51ef9d708730",
+      "packed": false
+    },    
+    {
+      "name": "firmware.tgz",
+      "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/firmware.tgz",
+      "sha256": "917e23eadfda4cadf129b4779f7e1ff55c5fd2c315326d63570d151c2b6b16fa",
+      "packed": false
+    },
+    {
+      "name": "install.sh",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/all-modules/src/install.sh",
+      "sha256": "5e937c9ad350248f3c3d71f47aa17175bbe6ac34cb9beb485a37e6464f046a67",
+      "packed": false
+    },
+    {
+      "name": "kmod",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/all-modules/auxfiles/kmod",
+      "sha256": "c28321e57b8af57b04905a346b093182f74d2836ca188c5536b47e6459153938",
+      "packed": false
+    }
+  ],
+  
+  "scripts": {
+    "on_boot": "install.sh"
+  }
+
+}
