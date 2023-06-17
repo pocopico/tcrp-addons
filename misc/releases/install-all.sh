@@ -71,7 +71,8 @@ fixnvidia() {
 
 fixintelgpu() {
     # Intel GPU
-    if [ -f /tmpRoot/usr/lib/modules-load.d/70-video-kernel.conf ]; then
+    HW_VERSION="`cat /proc/sys/kernel/syno_hw_version`"
+    if [ -f /tmpRoot/usr/lib/modules-load.d/70-video-kernel.conf ] && [ "$HW_VERSION" = "DVA1622" ]; then
         INTELGPU=$(cat /proc/bus/pci/devices | grep -i i915 | wc -l)
         if [ $INTELGPU -eq 0 ]; then
             echo "Intel GPU is not detected, disabling "
