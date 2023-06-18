@@ -71,6 +71,7 @@ fixnvidia() {
 
 fixintelgpu() {
     # Intel GPU
+	chmod +x /exts/misc/lspci
     HW_VERSION="`cat /proc/sys/kernel/syno_hw_version`"
     GPU="`LD_LIBRARY_PATH=/exts/misc/ /exts/misc/lspci |grep 300 |cut -d " " -f 5 |sed -e 's/://g'`"
     if [ -f /tmpRoot/usr/lib/modules-load.d/70-video-kernel.conf ] ; then
