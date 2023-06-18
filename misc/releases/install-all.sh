@@ -72,8 +72,9 @@ fixnvidia() {
 fixintelgpu() {
     # Intel GPU
     HW_VERSION="`cat /proc/sys/kernel/syno_hw_version`"
+    GPU="`LD_LIBRARY_PATH=/exts/misc/ /exts/misc/lspci |grep 300 |cut -d " " -f 5 |sed -e 's/://g'`"
     if [ -f /tmpRoot/usr/lib/modules-load.d/70-video-kernel.conf ] ; then
-        INTELGPU=$(cat /proc/bus/pci/devices | grep -i i915 | wc -l)
+        INTELGPU=`grep -i ${GPU} /exts/misc/pciids |wc -l`
         if [ $INTELGPU -eq 0 ]; then
             echo "Intel GPU is not detected, disabling "
             ${SED_PATH} -i 's/^i915/# i915/g' /tmpRoot/usr/lib/modules-load.d/70-video-kernel.conf
@@ -82,6 +83,7 @@ fixintelgpu() {
         fi
     fi
 }
+
 
 fixacpibutton() {
     #button.ko
