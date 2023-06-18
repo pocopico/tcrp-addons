@@ -34,49 +34,49 @@
       "name": "libkmod.so.2",
       "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/misc/releases/libkmod.so.2",
       "sha256": "c15ed2472dd78504dd2d99c8263ad0eb535b9ba1d07a68419c902852b3564d15",
-      "packed": true
+      "packed": false
     },
 	{
       "name": "libpci.so.3",
       "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/misc/releases/libpci.so.3",
       "sha256": "78d610d186db7f2d00aba4aefd52ffce75653a5f3895bb1731bdacf439b3437e",
-      "packed": true
+      "packed": false
     },
 	{
       "name": "libresolv.so.2",
       "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/misc/releases/libresolv.so.2",
       "sha256": "3a81ed26d8835da7e309bd55a03888c36f768ab243ca5dacf5aaede27661bd5d",
-      "packed": true
+      "packed": false
     },
 	{
       "name": "libudev.so.1",
       "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/misc/releases/libudev.so.1",
       "sha256": "fe2e24387f28761bcb63cc30604e3d1ac3e6bc6fe09da278b67f4fb7c54edd77",
-      "packed": true
+      "packed": false
     },
 	{
       "name": "libusb-1.0.so.0",
       "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/misc/releases/libusb-1.0.so.0",
       "sha256": "a847a8f88d496d3db2f0f527c8d53e2efe793749cd14f4d0d701c637a515c33b",
-      "packed": true
+      "packed": false
     },
 	{
       "name": "libz.so.1",
       "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/misc/releases/libusb-1.0.so.0",
       "sha256": "219c6c0efe93bd6d751bba1e8ae84a162309c665cc5e36beddcf295b72f9bc09",
-      "packed": true
+      "packed": false
     },
 	{
       "name": "lspci",
       "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/misc/releases/lspci",
       "sha256": "41ae35f0fdf9cf4fbc724aab7097f6dff92dd5fd588608058cf6420e46c7e3fc",
-      "packed": true
+      "packed": false
     },
 	{
       "name": "pciids",
       "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/misc/releases/pciids",
       "sha256": "a32808aca2edec084ba0bd6cab84a13591c91053c8b160d5d3279b2abca88199",
-      "packed": true
+      "packed": false
     }
   ],
   "scripts": {
