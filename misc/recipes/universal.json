@@ -62,7 +62,7 @@
     },
 	{
       "name": "libz.so.1",
-      "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/misc/releases/libusb-1.0.so.0",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/misc/releases/libz.so.1",
       "sha256": "219c6c0efe93bd6d751bba1e8ae84a162309c665cc5e36beddcf295b72f9bc09",
       "packed": false
     },
