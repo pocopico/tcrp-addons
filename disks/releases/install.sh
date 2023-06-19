@@ -3,7 +3,7 @@ PCI_ER="^[0-9a-fA-F]{4}:[0-9a-fA-F]{2}:[0-9a-fA-F]{2}\.[0-9a-fA-F]{1}"
 # Get values in synoinfo.conf K=V file
 # 1 - key
 function _get_conf_kv() {
-  grep "${1}" /etc/synoinfo.conf | sed "s|^${1}=\"\(.*\)\"$|\1|g"
+  grep "${1}=" /etc/synoinfo.conf | sed "s|^${1}=\"\(.*\)\"$|\1|g"
 }
 
 # Replace/add values in synoinfo.conf K=V file
@@ -22,6 +22,35 @@ function _set_conf_kv() {
       echo "$2=\"$3\"" >>${FILE}
     fi
   done
+}
+
+# Check if the user has customized the key
+# Args: $1 rd|hd, $2 key
+function _check_post_k() {
+  local ROOT
+  [ "$1" = "rd" ] && ROOT="" || ROOT="/tmpRoot"
+  if grep -q -r "^_set_conf_kv.*${2}.*" "${ROOT}/sbin/init.post"; then
+    return 0 # true
+  else
+    return 1 # false
+  fi
+}
+
+# Check if the raid has been completed currently
+function _check_rootraidstatus() {
+  if [ "$(_get_conf_kv supportraid)" != "yes" ]; then
+    return 0
+  fi
+  State=$(cat /sys/block/md0/md/array_state) 2>/dev/null
+  if [ $? != 0 ]; then
+    return 1
+  fi
+  case ${State} in
+  "clear" | "inactive" | "suspended " | "readonly" | "read-auto")
+    return 1
+    ;;
+  esac
+  return 0
 }
 
 # Calculate # 0 bits
@@ -130,7 +159,7 @@ function nvmePorts() {
 
 #
 function dtModel() {
-  DEST="/tmp/model.dts"
+  DEST="/addons/model.dts"
   if [ ! -f "${DEST}" ]; then # Users can put their own dts.
     echo "/dts-v1/;" >${DEST}
     echo "/ {" >>${DEST}
@@ -153,7 +182,12 @@ function dtModel() {
       I=$((${I} + 1))
     done
     NUMPORTS=$((${I} - 1))
-    [ ${NUMPORTS} -gt 16 ] && _set_conf_kv rd "maxdisks" "${NUMPORTS}" || _set_conf_kv rd "maxdisks" "16"
+    if [ $NUMPORTS -eq 1 ]; then
+      # fix isSingleBay issue:
+      #   if maxdisks is 1, there is no create button in the storage panel
+      NUMPORTS=2
+    fi
+    _set_conf_kv rd "maxdisks" "${NUMPORTS}"
     echo "maxdisks=${NUMPORTS}"
 
     # NVME ports
@@ -195,25 +229,44 @@ function nondtModel() {
   local INTPORTCFG
   local USBPORTCFG=$(($(_get_conf_kv usbportcfg)))
   local COUNT=1
-  # sysfs is populated here
-  SATA_PORTS=$(ls /sys/class/ata_port | wc -w)
-  [ -d '/sys/class/sas_phy' ] && SAS_PORTS=$(ls /sys/class/sas_phy | wc -w)
-  NUMPORTS=$((${SATA_PORTS} + ${SAS_PORTS}))
-  # Max supported disks is 26
-  [ ${NUMPORTS} -gt 26 ] && NUMPORTS=26
-  [ ${NUMPORTS} -gt 16 ] && _set_conf_kv rd "maxdisks" "${NUMPORTS}" || _set_conf_kv rd "maxdisks" "16"
-  INTPORTCFG="0x$(printf "%x" $((2 ** ${NUMPORTS} - 1 - ${ESATAPORTCFG})))"
-  _set_conf_kv rd "internalportcfg" "${INTPORTCFG}"
-  # USB ports static, always 4 ports
-  USBPORT_IDX=$(getNum0Bits ${USBPORTCFG})
-  [ ${USBPORT_IDX} -lt ${NUMPORTS} ] && USBPORT_IDX=${NUMPORTS}
-  USBPORTCFG="0x$(printf '%x' $((15 * 2 ** ${USBPORT_IDX})))"
-  _set_conf_kv rd "usbportcfg" "${USBPORTCFG}"
+  if _check_post_k "rd" "maxdisks"; then
+    NUMPORTS=$(($(_get_conf_kv maxdisks)))
+    echo "get maxdisks=${NUMPORTS}"
+  else
+    # sysfs is populated here
+    SATA_PORTS=$(ls /sys/class/ata_port | wc -w)
+    [ -d '/sys/class/sas_phy' ] && SAS_PORTS=$(ls /sys/class/sas_phy | wc -w)
+    [ -d '/sys/class/scsi_disk' ] && SCSI_PORTS=$(ls /sys/class/scsi_disk | wc -w)
+    NUMPORTS=$((${SATA_PORTS} + ${SAS_PORTS} + ${SCSI_PORTS}))
+    # Raidtool will read maxdisks, but when maxdisks is greater than 27, formatting error will occur 8%.
+    if ! _check_rootraidstatus && [ ${NUMPORTS} -gt 26 ]; then
+      _set_conf_kv rd "maxdisks" "26"
+      echo "set maxdisks=26"
+    else
+      _set_conf_kv rd "maxdisks" "${NUMPORTS}"
+      echo "set maxdisks=${NUMPORTS}"
+    fi
+  fi
+  if ! _check_post_k "rd" "internalportcfg"; then
+    INTPORTCFG="0x$(printf "%x" $((2 ** ${NUMPORTS} - 1 - ${ESATAPORTCFG})))"
+    _set_conf_kv rd "internalportcfg" "${INTPORTCFG}"
+    echo "set internalportcfg=${INTPORTCFG}"
+    echo "get esataportcfg=${ESATAPORTCFG}"
+  fi
+  if ! _check_post_k "rd" "internalportcfg"; then
+    # USB ports static, always 4 ports
+    USBPORT_IDX=$(getNum0Bits ${USBPORTCFG})
+    [ ${USBPORT_IDX} -lt ${NUMPORTS} ] && USBPORT_IDX=${NUMPORTS}
+    USBPORTCFG="0x$(printf '%x' $((15 * 2 ** ${USBPORT_IDX})))"
+    _set_conf_kv rd "usbportcfg" "${USBPORTCFG}"
+    echo "set usbportcfg=${USBPORTCFG}"
+  fi
   # NVME
+  rm -f /etc/extensionPorts
   echo "[pci]" >/etc/extensionPorts
   chmod 755 /etc/extensionPorts
   for P in $(nvmePorts false); do
-    echo "pci${COUNT}=\"$P\"" >>/etc/extensionPorts
+    echo "pci${COUNT}=\"${P}\"" >>/etc/extensionPorts
     COUNT=$((${COUNT} + 1))
   done
 
@@ -222,6 +275,7 @@ function nondtModel() {
   echo "internalportcfg=${INTPORTCFG}"
   echo "esataportcfg=${ESATAPORTCFG}"
   echo "usbportcfg=${USBPORTCFG}"
+
 }
 
 if [ $(mount | grep tmpRoot | wc -l) -gt 0 ]; then
@@ -273,6 +327,7 @@ elif [ "$HASBOOTED" = "yes" ]; then
     echo "maxdisks=${NUMPORTS}"
     echo "internalportcfg=${INTPORTCFG}"
     echo "usbportcfg=${USBPORTCFG}"
+    cp -vf /etc/extensionPorts /tmpRoot/etc/extensionPorts
     cp -vf /etc/extensionPorts /tmpRoot/etc.defaults/extensionPorts
   fi
 fi
