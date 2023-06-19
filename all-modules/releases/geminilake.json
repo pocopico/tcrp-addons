@@ -5,19 +5,19 @@
     {
       "name": "geminilake-4.4.180.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/geminilake-4.4.180.tgz",
-      "sha256": "a664533ca5aa0e36627ff0f3aabe2fb0819083c90441d4fc54fff7df8e63f8ec",
+      "sha256": "4ac95581933fd067d36e7d2a1ed2f3721202e9a9684e92977a924a7484c48834",
       "packed": false
     },
     {
       "name": "geminilake-4.4.302.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/geminilake-4.4.302.tgz",
-      "sha256": "9659efed886e6d03b53486be3d132c7f8c5dae10aa87f199f937a3b508f48d1f",
+      "sha256": "7e012a48aa134c7179c11955e7ece0fb7fe928b4d8e8541e34c408287a39c9b5",
       "packed": false
     },     
     {
       "name": "firmware.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/firmware.tgz",
-      "sha256": "917e23eadfda4cadf129b4779f7e1ff55c5fd2c315326d63570d151c2b6b16fa",
+      "sha256": "56f4932861b287ba9a9ed3b43f3718e84c3f9883fa5455d0207bc6b9585f3e93",
       "packed": false
     },
     {

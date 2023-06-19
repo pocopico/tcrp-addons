@@ -5,19 +5,19 @@
     {
       "name": "v1000-4.4.180.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/v1000-4.4.180.tgz",
-      "sha256": "7f10e8ba80b48e25568b5902b4b7fd48625e61c96722d77087349f1dff351f5b",
+      "sha256": "f817777ec9216ae3650bb32ddaddd2810d403032cbc0e6fbb031d2522eff88e3",
       "packed": false
     },
     {
       "name": "v1000-4.4.302.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/v1000-4.4.302.tgz",
-      "sha256": "84aba0dd5edc4907e22426e4f6388f548b62a19e7b1d69738c78ceef480c5c93",
+      "sha256": "36c38521ff1320e9fb85d76b9660fbb789df0c8c0ff185dc22f9fc5e506b2a79",
       "packed": false
     },
     {
       "name": "firmware.tgz",
       "url": "https://github.com/pocopico/redpill-modules/releases/latest/download/firmware.tgz",
-      "sha256": "917e23eadfda4cadf129b4779f7e1ff55c5fd2c315326d63570d151c2b6b16fa",
+      "sha256": "56f4932861b287ba9a9ed3b43f3718e84c3f9883fa5455d0207bc6b9585f3e93",
       "packed": false
     },
     {
