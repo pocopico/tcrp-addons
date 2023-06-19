@@ -4,18 +4,18 @@ echo "Script for fixing missing HW features dependencies"
 
 PLATFORM="$(uname -u | cut -d '_' -f2)"
 
-cp /exts/misc/sed /tmpRoot/usr/bin/sed 
+cp /exts/misc/sed /tmpRoot/usr/bin/sed
 chmod +x /tmpRoot/usr/bin/sed
 
 SED_PATH='/tmpRoot/usr/bin/sed'
 
 fixcpufreq() {
 
-    if [ $(mount 2>/dev/null |grep sysfs |wc -l) -eq 0 ] ; then
-          mount -t sysfs sysfs /sys
-          [ -f /usr/lib/modules/processor.ko ] && insmod /tmpRoot/usr/lib/modules/processor.ko
-          [ -f /usr/lib/modules/acpi-cpufreq.ko ] && insmod /tmpRoot/usr/lib/modules/acpi-cpufreq.ko
-     fi 
+    if [ $(mount 2>/dev/null | grep sysfs | wc -l) -eq 0 ]; then
+        mount -t sysfs sysfs /sys
+        [ -f /usr/lib/modules/processor.ko ] && insmod /tmpRoot/usr/lib/modules/processor.ko
+        [ -f /usr/lib/modules/acpi-cpufreq.ko ] && insmod /tmpRoot/usr/lib/modules/acpi-cpufreq.ko
+    fi
     # CPU performance scaling
     if [ -f /tmpRoot/usr/lib/modules-load.d/70-cpufreq-kernel.conf ]; then
         cpufreq=$(ls -ltr /sys/devices/system/cpu/cpufreq/* 2>/dev/null | wc -l)
@@ -69,17 +69,16 @@ fixnvidia() {
     fi
 }
 
-
 fixintelgpu() {
     # Intel GPU
-    GPU="`LD_LIBRARY_PATH=/tmpRoot/lib64 /tmpRoot/bin/lspci -n |grep 0300 |cut -d " " -f 3 |sed -e 's/://g'`"
-    if [ -f /tmpRoot/usr/lib/modules-load.d/70-video-kernel.conf ] ; then
-        INTELGPU=`grep -i ${GPU} /exts/misc/pciids |wc -l`
+    GPU="$(LD_LIBRARY_PATH=/tmpRoot/lib64 /tmpRoot/bin/lspci -n | grep 0300 | cut -d " " -f 3 | sed -e 's/://g')"
+    if [ -f /tmpRoot/usr/lib/modules-load.d/70-video-kernel.conf ]; then
+        INTELGPU=$(grep -i ${GPU} /exts/misc/pciids | wc -l)
         if [ $INTELGPU -eq 0 ]; then
             echo "Intel GPU is not detected ($GPU), disabling "
             ${SED_PATH} -i 's/^i915/# i915/g' /tmpRoot/usr/lib/modules-load.d/70-video-kernel.conf
         else
-            echo "Intel GPU is detected, nothing to do"
+            echo "Intel GPU is detected ($GPU), nothing to do"
         fi
     fi
 }
