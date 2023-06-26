@@ -21,7 +21,7 @@ fi
 if [ "$HASBOOTED" = "no" ]; then
 
     echo "extract cgetty.tgz to /usr/sbin/ "
-    tar xfz /exts/cgetty/cgetty.tgz -C /
+    tar xfz /exts/console/cgetty.tgz -C /
 
     TARGET_PLATFORM="$(uname -u | cut -d '_' -f2)"
     echo $TARGET_PLATFORM
