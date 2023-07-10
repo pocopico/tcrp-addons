@@ -41,5 +41,5 @@ done
 
 
 getvars
-checkforsas
 prepare_eudev
+checkforsas
