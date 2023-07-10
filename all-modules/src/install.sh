@@ -22,5 +22,24 @@ tar xfz /exts/all-modules/firmware.tgz -C /lib/firmware/
 /usr/sbin/depmod -a
 }
 
+function checkforsas() {
+
+sasmods="mpt3sas hpsa mvsas"
+for sasmodule in $sasmods
+do
+echo "Checking existense of $sasmodule"
+for alias in `depmod -n 2>/dev/null |grep -i $sasmodule |grep pci|cut -d":" -f 2 | cut -c 6-9,15-18`
+do
+if [ `grep -i $alias /proc/bus/pci/devices |wc -l` -gt 0 ] ; then
+echo "  => $sasmodule, device found, loading module" 
+insmod /lib/modules/${sasmodule}.ko 
+fi
+done
+done 
+
+}
+
+
 getvars
+checkforsas
 prepare_eudev
