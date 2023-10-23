@@ -40,6 +40,15 @@
     "sa6400_64570": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/dtbpatch/recipes/universal.json",
     "ds923p_64570": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/dtbpatch/recipes/universal.json",
     "ds723p_64570": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/dtbpatch/recipes/universal.json",
+    "ds920p_69057": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/dtbpatch/recipes/universal.json",
+    "ds1520p_69057": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/dtbpatch/recipes/universal.json",
+    "ds1621p_69057": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/dtbpatch/recipes/universal.json",
+    "ds2422p_69057": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/dtbpatch/recipes/universal.json",
+    "dva1622_69057": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/dtbpatch/recipes/universal.json",
+    "fs2500_69057": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/dtbpatch/recipes/universal.json",
+    "sa6400_69057": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/dtbpatch/recipes/universal.json",
+    "ds923p_69057": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/dtbpatch/recipes/universal.json",
+    "ds723p_69057": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/dtbpatch/recipes/universal.json",
     "zendofmodel": "endofurls"
   },
   "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/dtbpatch/rpext-index.json"

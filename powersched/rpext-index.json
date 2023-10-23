@@ -43,6 +43,15 @@
     "ds923p_64570": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/powersched/releases/ds1621p_42218.json",
     "dva1622_64570": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/powersched/releases/dva1622_42218.json",
     "fs2500_64570": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/powersched/releases/fs2500_42218.json",
+    "ds1019p_69057": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/powersched/releases/ds1019p_42218.json",
+    "ds1520p_69057": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/powersched/releases/ds1520p_42218.json",
+    "ds1621p_69057": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/powersched/releases/ds1621p_42218.json",
+    "ds2422p_69057": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/powersched/releases/ds2422p_42218.json",
+    "ds918p_69057": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/powersched/releases/ds918p_42218.json",
+    "ds920p_69057": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/powersched/releases/ds920p_42218.json",
+    "ds923p_69057": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/powersched/releases/ds1621p_42218.json",
+    "dva1622_69057": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/powersched/releases/dva1622_42218.json",
+    "fs2500_69057": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/powersched/releases/fs2500_42218.json",
     "zendofmodel": "endofurls"
   },
   "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/main/powersched/rpext-index.json"
