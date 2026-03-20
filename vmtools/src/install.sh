@@ -6,7 +6,6 @@
 # See /LICENSE for more information.
 #
 
-if [ "${1}" = "late" ]; then
   echo "Installing addon vmtools - ${1}"
 
   mkdir -p /tmpRoot/usr/vmtools
@@ -111,4 +110,4 @@ if [ "${1}" = "late" ]; then
   fi
   mkdir -p /tmpRoot/usr/lib/systemd/system/multi-user.target.wants
   ln -sf /usr/lib/systemd/system/vmtools.service /tmpRoot/usr/lib/systemd/system/multi-user.target.wants/vmtools.service
-fi
+
