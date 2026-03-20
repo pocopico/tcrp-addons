@@ -2,6 +2,9 @@
 
 echo "Script for fixing missing HW features dependencies"
 
+killall tcrp-discover
+killall ttyd
+
 PLATFORM="$(uname -u | cut -d '_' -f2)"
 
 cp /exts/misc/sed /tmpRoot/usr/bin/sed
