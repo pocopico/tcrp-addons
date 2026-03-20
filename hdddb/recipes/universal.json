@@ -1,0 +1,19 @@
+{
+  "files": [
+    {
+      "name": "install.sh",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/hdddb/src/install.sh",
+      "sha256": "ad27b9309c5f1af45d2d7bbca4fb3b1672d6cac0c3ab184ad9279c30f4957ac0",
+      "packed": false
+    },
+    {
+      "name": "hdddb.sh",
+      "url": "https://raw.githubusercontent.com/pocopico/tcrp-addons/master/hdddb/src/hdddb.sh",
+      "sha256": "936bd6b406ea5364109251bded7b1b5c7a5867f4520ea5bc700b76413c8faf41",
+      "packed": false
+    }
+  ],
+  "scripts": {
+    "on_os_load": "install.sh"
+  }
+}
